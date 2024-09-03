@@ -548,31 +548,39 @@ html{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-.contacto{
+.contacto {
     background-image: url(img/contact_bg.png);
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
 }
-.contacto .contenido-seccion{
-    max-width: 1100px;
+
+.contacto .contenido-seccion {
+    max-width: 1200px; /* Incrementa el max-width para que abarque más espacio */
     margin: auto;
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.contacto .fila{
+
+.contacto .fila {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    justify-content: center;
 }
-.contacto .col{
-    width: 50%;
+
+.contacto .col {
+    width: 50%; /* Aumenta el ancho de las columnas para abarcar más espacio */
     padding: 10px;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto .col input,
+.contacto .col textarea {
     display: block;
     width: 100%;
     padding: 18px;
@@ -581,8 +589,10 @@ html{
     background-color: #252A2E;
     color: #fff;
     font-size: 18px;
+    border-radius: 5px;
 }
-.contacto button{
+
+.contacto button {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -590,12 +600,14 @@ html{
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
-    font-size: 16px;
+    font-size: 18px; /* Incrementa el tamaño de la fuente */
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 5px; /* Añade bordes redondeados */
 }
-.contacto button .overlay{
+
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -605,28 +617,35 @@ html{
     z-index: -1;
     transition: 1s;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover .overlay {
     width: 100%;
 }
-.contacto .col img{
+
+.contacto .col img {
     width: 100%;
 }
-.contacto .col .info{
+
+.contacto .col .info {
     position: absolute;
     top: 40%;
     background-color: #252A2E;
     padding: 20px;
-    max-width: 350px;
+    max-width: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 5px; 
 }
-.contacto .col .info ul{
+
+.contacto .col .info ul {
     list-style: none;
 }
-.contacto .col .info ul li{
+
+.contacto .col .info ul li {
     margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
+
+.contacto .col .info ul li i {
     color: #1CB698;
     display: inline-block;
     margin-right: 20px;
@@ -828,10 +847,12 @@ footer .arriba{
     transition: background 0.3s ease;
 }
 
-#btnClose:hover, #btnClose2:hover {
+#btnClose:hover {
     background: #B14141;
 }
-
+#btnClose2:hover {
+    background: #27792a;
+}
 /* Animaciones */
 @keyframes fadeIn {
     from {

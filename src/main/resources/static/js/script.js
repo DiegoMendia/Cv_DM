@@ -11,7 +11,7 @@ function mostrarOcultarMenu(){
 }
 
 function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
+    //oculta menu una vez que selecciono una opcion
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
@@ -37,41 +37,54 @@ function efectoHabilidades(){
 }
 
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
+//detector scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
 }
 
 
-//ventana
-document.getElementById("contactForm").addEventListener("submit", function(event){
-    event.preventDefault();  // Prevenir el envío tradicional del formulario
+//ventana error
 
-    var form = document.getElementById("contactForm");
-    var formData = new FormData(form);
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('contactForm');
 
-    fetch(form.action, {
-        method: "POST",
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text();  // Obtener la respuesta como texto
-    })
-    .then(html => {
-    console.log(html);
-        // Insertar el fragmento recibido en el contenedor de mensajes
-        document.getElementById("mensaje-container").innerHTML = html;
-        document.getElementById("mensaje-container").scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.addEventListener('submit', function(event) {
+        // Evitar el comportamiento predeterminado de envío del formulario
+        event.preventDefault();
 
-        // Agregar manejadores de eventos para los botones de cerrar
-        document.querySelectorAll('#btnClose, #btnClose2').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.querySelector('.modal_wrap').style.display = 'none';
+        // Obtener el formulario
+        var formData = new FormData(form);
+
+        // Hacer una solicitud AJAX
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Actualizar el contenedor de mensajes
+            var mensajeContainer = document.getElementById('mensaje-container');
+            mensajeContainer.innerHTML = data.messageHtml; // Asegúrate de que el servidor envíe HTML de respuesta
+
+            // Verifica si el mensaje de éxito está presente
+            var exitoModal = document.querySelector('.modal_wrap .mensaje_modal h3');
+            if (exitoModal && exitoModal.textContent.trim() === "Mensaje enviado") {
+                // Limpiar el formulario si se muestra el mensaje de éxito
+                form.reset();
+            }
+
+            // Añadir los manejadores de eventos para los botones de cierre
+            document.querySelectorAll('#btnClose, #btnClose2').forEach(function(btn) {
+                        btn.addEventListener('click', function() {
+                            document.querySelector('.modal_wrap').style.display = 'none';
+                        });
             });
+        })
+        .catch(error => {
+            console.error('Error:', error);
         });
-    })
-    .catch(error => console.error('Error:', error));
+    });
 });
