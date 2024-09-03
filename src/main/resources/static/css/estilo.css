@@ -215,55 +215,88 @@ html{
 .sobremi button:hover .overlay{
     width: 100%;
 }
-/* SECCION S K I L L S */
-.skills{
+/* SECCION SKILLS */
+.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-
 }
-.skills .fila{
+.skills .fila {
     display: flex;
 }
-.skills .fila .col{
+.skills .fila .col {
     width: 50%;
     padding: 0 20px;
 }
-.skills .fila .col h3{
+.skills .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.skills .skill > span{
+
+/* Nueva clase para Technical Skills */
+.skills .fila .technical-skill .contenedor-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills .fila .technical-skill .skill {
+    width: 115px;
+    height: 115px;
+    background-color: #1CB698;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.skills .fila .technical-skill .skill:hover {
+    background-color: #2DE0C8;
+}
+.skills .fila .technical-skill .skill i {
+    font-size: 40px;
+    margin-bottom: 10px;
+
+}
+.skills .fila .technical-skill .skill span {
+    font-weight: bold;
+    display: block;
+}
+
+.skills .skill > span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-.skills .skill .barra-skill{
+
+.skills .skill .barra-skill {
     height: 8px;
     width: 80%;
-    background-color: #131517;
+    background-color: #252A2E;
     position: relative;
     margin-bottom: 30px;
 }
-.skills .skill .progreso{
+
+.skills .skill .progreso {
     background-color: #1CB698;
     position: absolute;
     top: 0;
     left: 0;
     height: 8px;
 }
-.skills .skill .barra-skill span{
+
+.skills .skill .barra-skill span {
     position: absolute;
     height: 40px;
     width: 40px;
@@ -275,60 +308,18 @@ html{
     right: -15px;
     font-size: 14px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills .fila {
+        flex-direction: column;
+    }
+
+    .skills .col {
+        width: 100%;
+    }
+}
 /* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .java{
-    width: 0%;
-    animation: 2s java forwards;
-}
-@keyframes java {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .sql{
-    width: 0%;
-    animation: 2s sql forwards;
-}
-@keyframes sql {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .spring{
-    width: 0%;
-    animation: 2s spring forwards;
-}
-@keyframes spring {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .php{
-    width: 0%;
-    animation: 2s php forwards;
-}
-@keyframes php {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
 
 .skills .skill .autodidacta{
     width: 0%;
@@ -634,7 +625,7 @@ html{
     max-width: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 .contacto .col .info ul {
