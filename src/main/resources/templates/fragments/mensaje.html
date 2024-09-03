@@ -1,0 +1,26 @@
+<!--  Ventana de errores -->
+<!-- Modal de error -->
+<!-- fragments/mensaje.html -->
+<!-- fragments/mensaje.html -->
+
+<!-- Fragmento de mensaje de error -->
+<div th:fragment="mensaje-error" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div th:if="${error != null}" class="modal_wrap mensaje_error">
+        <div class="mensaje_modal">
+            <h3>Complete los campos</h3>
+            <p th:text="${error}"></p>
+            <span id="btnClose">Cerrar</span>
+        </div>
+    </div>
+</div>
+
+<!-- Fragmento de mensaje de éxito -->
+<div th:fragment="mensaje-exito" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div th:if="${exito != null}" class="modal_wrap mensaje_exito">
+        <div class="mensaje_modal">
+            <h3>Mensaje enviado</h3>
+            <p th:text="${exito}"></p>
+            <span id="btnClose2">Cerrar</span>
+        </div>
+    </div>
+</div>
