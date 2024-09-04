@@ -1,5 +1,5 @@
 # Usa una imagen base de Java
-FROM amazoncorretto:11-alpine-jdk
+FROM openjdk:17-jdk-slim
 
 #Quien es el dueño
 MAINTAINER DM
