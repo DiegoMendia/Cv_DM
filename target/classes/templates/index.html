@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+
+<body>
+<!-- MENU ENCABEZADO -->
+<div class="contenedor-header">
+    <header>
+        <div class="logo">
+            <a href="#">DM</a>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+</div>
+
+<!-- SECCION INICIO -->
+<section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img src="img/hero.png" alt="">
+        </div>
+        <h1>DIEGO MENDIA</h1>
+        <h2> Desarrollador Web</h2>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/diego-mendia-2909a4243/"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/DiegoMendia2"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/DiegoMendia"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- SECCION SOBRE MI -->
+<section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p><span>Hola, soy Diego German Mendia.</span> Soy un desarrollador motivado y autodidacta, con la capacidad de adaptarme, mejorar y motivar a mi equipo, complementado por sólidas habilidades blandas que potencian cualquier grupo de trabajo. Destaco por mi pensamiento lógico y enfoque colaborativo, siempre dispuesto a comunicarme de manera efectiva y a mantener una actitud positiva. Mi historial comprobado de aprendizaje continuo y superación de expectativas, incluso bajo presión, respalda mi compromiso con la excelencia y el logro de resultados. Estoy entusiasmado por la oportunidad de contribuir con mi experiencia y habilidades al éxito de su equipo, y espero poder discutir cómo puedo agregar valor a su empresa.</p>
+
+        <div class="fila">
+            <!-- datos personales -->
+            <div class="col">
+                <h3>Datos Personales</h3>
+                <ul>
+                    <li>
+                        <strong>Nacimiento</strong>
+                        21-01-1992
+                    </li>
+                    <li>
+                        <strong>Teléfono</strong>
+                        +54 9 388 4375632
+                    </li>
+                    <li>
+                        <strong>Dirección</strong>
+                        Córdoba, Argentina
+                    </li>
+                    <li>
+                        <strong>Idiomas</strong>
+                        Ingles Intermedio
+                    </li>
+                </ul>
+            </div>
+
+            <!-- intereses -->
+            <div class="col">
+                <h3>Intereses</h3>
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-computer"></i>
+                        <span>TECNOLOGIA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>APPS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>MUSICA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-plane"></i>
+                        <span>VIAJAR</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>JUEGOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-book"></i>
+                        <span>LIBROS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-car"></i>
+                        <span>AUTOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-person-hiking"></i>
+                        <span>DEPORTE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCION SKILLS -->
+<section class="skills" id="skills">
+    <div class="contenido-seccion">
+        <h2>Skills</h2>
+        <div class="fila">
+            <!-- Technical Skill -->
+            <div class="col technical-skill">
+                <h3>Technical Skills</h3>
+                <div class="contenedor-skills">
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-java"></i>
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-github"></i>
+                        <span>Github</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Professional Skills -->
+            <div class="col professional-skills">
+                <h3>Professional Skills</h3>
+                <div class="skill">
+                    <span>Autodidacta</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Comunicación</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Trabajo en Equipo</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Creatividad</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Dedicación</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Tolerancia a la Frustración</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION CURRICULUM -->
+<section id="curriculum" class="curriculum">
+    <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+        <div class="fila">
+            <div class="col izquierda">
+                <h3>Educación</h3>
+                <div class="item izq">
+                    <h4>Ingenieria en Computación</h4>
+                    <span class="casa">Universidad de Córdoba </span>
+                    <span class="fecha">2016- 2017</span>
+                    <p>Durante este periodo curse 2 años de Ingenieria en computacion dentro de la Facultad de Ciencias Exactas, Fisicas y Tecnologicas.</p>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+                </div>
+                <div class="item izq">
+                    <h4>Desarrollador Full Stack</h4>
+                    <span class="casa">Egg y Oracle</span>
+                    <span class="fecha">2023 - 2024</span>
+                    <p>Despues de no poder continuar con mis estudios universitarios tomo la iniciativa de comenzar de manera autodidacta en el mundo del desarrollo web, encontre lo que me gusta y me desafie a seguir aprendiendo y hasta obtuve una beca con oracle.</p>
+                    <div class="conectori">
+                        <div class="circuloi"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col derecha">
+                <h3>Experiencia de trabajo</h3>
+                <div class="item der">
+                    <h4>Desarrollador con PHP</h4>
+                    <span class="casa">Freelancer</span>
+                    <span class="fecha">2024</span>
+                    <p>Durante este año surgue la posibilidad de un nuevo desafio en continuar con un proyecto en lenguaje PHP para un juego. Acepte el compromiso y con mi conocimiento junto a toda la informacion que se encuentra tanto en la web como en la documentacion logre finalizarlo con resultado sastifactorio para dicho cliente.</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div>
+                <!--<div class="item der">
+                    <h4></h4>
+                    <span class="casa"></span>
+                    <span class="fecha"></span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora
+                        recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta
+                        aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                    <div class="conectord">
+                        <div class="circulod"></div>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="img/p1.jpg" alt="">
+                <div class="overlay">
+                    <!-- <h3>Diseño Creativo</h3> -->
+                    <a href="https://diegomendia.github.io/Juego_Numero_Secreto/" style="text-decoration: none;"><h3>Juego de Numero Secreto</h3></a>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p2.jpg" alt="">
+                <div class="overlay">
+                    <a href="https://diegomendia.github.io/Encriptador_Texto/" style="text-decoration: none;"><h3>Encriptador de Texto</h3></a>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p3.jpg" alt="">
+                <div class="overlay">
+                    <a href="https://l2princess.com.ar/" style="text-decoration: none;"><h3>Proyecto Php</h3></a>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="img/p4.jpg" alt="">
+                <div class="overlay">
+                    <h3>Biblioteca</h3>
+                    <!-- <p></p> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION CONTACTO -->
+<section id="contacto" class="contacto">
+    <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <form id="contactForm" th:action="@{/sendMail}" method="POST">
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" name="name" placeholder="Nombre" id="name" th:value="${name}">
+                    <input type="text" name="email" placeholder="Dirección de correo" id="email" th:value="${email}">
+                    <input type="text" name="subject" placeholder="Asunto" th:value="${subject}">
+                    <textarea name="body" id="body" cols="30" rows="10" placeholder="Mensaje" th:value="${body}"></textarea>
+                    <button type="submit" id="btnSend">
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+        <!-- Contenedor para los mensajes -->
+        <div id="mensaje-container"></div>
+
+    </div>
+</section>
+
+<!-- footer -->
+<footer>
+    <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <div class="redes">
+        <a href="https://www.linkedin.com/in/diego-mendia-2909a4243/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/diego.mendia.39"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://x.com/DiegoMendia2"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/diego.mendia/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <h3>© 2024 DM - Todos los derechos reservados.</h3>
+</footer>
+<script src="/js/jquery-v3.7.1.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
