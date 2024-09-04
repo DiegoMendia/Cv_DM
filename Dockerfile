@@ -1,14 +1,11 @@
-# Usar una imagen base de Java
-FROM openjdk:17-jdk-slim
+# Usa una imagen base de Java
+FROM amazoncorretto:11-alpine-jdk
 
-# Establecer el directorio de trabajo dentro del contenedor
-WORKDIR /app
+#Quien es el dueño
+MAINTAINER DM
 
-# Copiar el archivo JAR generado en el contenedor
-COPY target/*.jar app.jar
+# Copia el archivo JAR al contenedor
+COPY target/send_mail-0.0.1-SNAPSHOT  dm-app.jar
 
-# Exponer el puerto en el que Spring Boot está ejecutando
-EXPOSE 8080
-
-# Comando para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Especifica el comando para ejecutar la aplicación
+ENTRYPOINT ["java", "-jar", "/dm-app.jar"]
