@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cv_dm:
+    build: CurriculumV4/docker-compose
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
