@@ -7,5 +7,7 @@ MAINTAINER DM
 # Copia el archivo JAR al contenedor
 COPY target/send_mail-0.0.1-SNAPSHOT.jar  dm-app.jar
 
+EXPOSE 8080
+
 # Especifica el comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "/dm-app.jar"]
